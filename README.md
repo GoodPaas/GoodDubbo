@@ -23,6 +23,7 @@ Maven项目添加依赖：
 ## 2、Demo Service
 创建Service，用于远程调用测试,为了测试客户端负载均衡，创建两个Service实现：  
 Service接口:  
+		
 		package com.goodpaas.gooddubbo.demo;
 		public interface DemoService {
 			
@@ -32,6 +33,7 @@ Service接口:
 
 		}
 Service1实现：  
+
 		package com.goodpaas.gooddubbo.demo;
 		public class Demo1ServiceImpl implements DemoService{
 
@@ -49,6 +51,7 @@ Service1实现：
 
 		}
 Service2实现：  
+
 		package com.goodpaas.gooddubbo.demo;
 		public class Demo2ServiceImpl implements DemoService{
 
@@ -67,6 +70,7 @@ Service2实现：
 		}
 ## 3、直接调用API Demo
 服务端对外暴露Service1:  
+
 		package com.goodpaas.gooddubbo.demo.simple;
 		import com.goodpaas.gooddubbo.demo.Demo1ServiceImpl;
 		import com.goodpaas.gooddubbo.demo.DemoService;
@@ -83,7 +87,8 @@ Service2实现：
 		        System.in.read(); // 按任意键退出
 		    }
 		}
-服务端对外暴露Service2:  
+服务端对外暴露Service2: 
+
 		package com.goodpaas.gooddubbo.demo.simple;
 		import com.goodpaas.gooddubbo.demo.Demo2ServiceImpl;
 		import com.goodpaas.gooddubbo.demo.DemoService;
@@ -101,6 +106,7 @@ Service2实现：
 		    }
 		}
 客户端通过代理调用后端Service实现：  
+
 		package com.goodpaas.gooddubbo.demo.simple;
 		import com.goodpaas.gooddubbo.demo.DemoService;
 		import com.goodpaas.gooddubbo.support.GLocalClientConfig;
