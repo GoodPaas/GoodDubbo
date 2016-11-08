@@ -13,7 +13,6 @@ import com.alibaba.dubbo.common.utils.NetUtils;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class Config {
 	

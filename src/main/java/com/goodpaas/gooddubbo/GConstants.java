@@ -6,7 +6,6 @@ package com.goodpaas.gooddubbo;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class GConstants {
 	

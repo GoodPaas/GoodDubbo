@@ -1,7 +1,7 @@
 /**
  * @Copyright: 2016-2016 <a href="https://github.com/goodpaas/gooddubbo">gooddubbo</a>. All rights reserved.
  */
-package com.goodpaas.gooddubbo.demo.simple;
+package com.goodpaas.gooddubbo.demo.simple.hessian;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,7 +14,7 @@ import com.goodpaas.gooddubbo.demo.DemoService;
 public class MainSpringClient {
 	
 	public static void main(String[] args) throws Exception {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"demo/simple/def_client.xml"});
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"demo/simple/hessian_client.xml"});
         context.start();
         DemoService demoService = (DemoService)context.getBean("demoProxy");
         while(true){

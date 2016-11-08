@@ -16,7 +16,6 @@ import com.goodpaas.gooddubbo.registry.GoodLocalRegistry;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class GoodSupportFactory {
 	

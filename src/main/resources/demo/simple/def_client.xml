@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 服务端集群名称，用于监控和配置管理 -->
+	<dubbo:application name="demo-client" />
+	
+	<!-- 客户端配置注册管理器，管理服务和集群IP等，此处为GoodPaas实现的本地注册器，不依赖额外服务 -->
+	<dubbo:registry protocol="glocal">
+	    <!-- key为要调用的集群名称，最好和服务端application的name对应，value为提供服务的集群ip和端口，多个ip使用都好分割 -->
+	    <!-- key值不能重复，否则会抛出异常 -->
+	    <dubbo:parameter key="demo-service" value="127.0.0.1:20880,127.0.0.1:20881"/>
+    </dubbo:registry>
+    
+	<!-- 客户端调用远程服务的代理，id可以被其他SpringBean ref -->
+	<dubbo:reference id="demoProxy" interface="com.goodpaas.gooddubbo.demo.DemoService">
+	    <!-- 远程服务集群配置，key必须为gremote，value为上面registry钟配置的key值 -->
+	    <dubbo:parameter key="gremote" value="demo-service"/>
+    </dubbo:reference>
+	
+       
+</beans>

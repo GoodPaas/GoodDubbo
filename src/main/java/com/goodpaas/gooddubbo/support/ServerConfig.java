@@ -9,7 +9,6 @@ import java.util.Map;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class ServerConfig extends Config{
 	

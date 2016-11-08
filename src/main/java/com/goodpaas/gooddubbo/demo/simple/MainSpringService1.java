@@ -8,12 +8,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class MainSpringService1 {
 	
 	public static void main(String[] args) throws Exception {
-        ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext(new String[] {"demo/simple/service1.xml"});
+        ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext(new String[] {"demo/simple/def_service1.xml"});
         context1.start();
  
         System.in.read(); // 按任意键退出

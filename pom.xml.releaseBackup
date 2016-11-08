@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.goodpaas</groupId>
     <artifactId>gooddubbo</artifactId>
-    <version>0.1.2.snapshot</version>
+    <version>0.1.0.snapshot</version>
     <packaging>jar</packaging>
 	<organization>
 		<name>GoodPaas</name>
@@ -33,7 +33,7 @@
 	    <connection>scm:git:https://github.com/GoodPaas/GoodDubbo.git</connection>
 	    <developerConnection>scm:git:https://github.com/GoodPaas/GoodDubbo.git</developerConnection>
 	    <url>https://github.com/GoodPaas/GoodDubbo</url>
-	    <tag>gooddubbo-0.1.0</tag>
+	    <tag>gooddubbo-0.1.0.snapshot</tag>
 	</scm>
 	<distributionManagement>
 	    <snapshotRepository>
@@ -47,6 +47,7 @@
 	    </repository>
 	</distributionManagement>
 	<build>
+        <pluginManagement>
 	<plugins>
 	    <plugin>
 	        <groupId>org.sonatype.plugins</groupId>
@@ -99,13 +100,13 @@
 	        </executions>
 	    </plugin>
 	</plugins>
+	</pluginManagement>
 	</build>
     <dependencies>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
             <version>2.5.3</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
 		    <groupId>com.caucho</groupId>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- DemoService服务端实现 -->
+    <bean id="demoService1" class="com.goodpaas.gooddubbo.demo.Demo1ServiceImpl" />
+    
+    <!-- 服务端集群名称，用于监控和配置管理 -->
+    <dubbo:application name="demo-service" />
+    
+    <!-- 服务端配置注册管理器，管理服务和集群IP等，由于此处不需要第三方注册管理，设置为N/A -->
+    <dubbo:registry protocol="glocal" />
+    
+    <!-- 暴露服务的协议和端口 -->
+    <dubbo:protocol port="20880" />
+    
+    <!-- 对外暴露服务，具体服务实现ref上面的demoService -->
+	<dubbo:service interface="com.goodpaas.gooddubbo.demo.DemoService" ref="demoService1" />
+       
+</beans>

@@ -8,7 +8,6 @@ import com.goodpaas.gooddubbo.GConstants;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class GLocalServerConfig extends ServerConfig{
 	

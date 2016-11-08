@@ -17,7 +17,6 @@ import com.alibaba.dubbo.registry.Registry;
 /**
  * @author gper
  *
- * @date 2016年11月6日
  */
 public class GoodLocalRegistry implements Registry {
 
@@ -72,7 +71,7 @@ public class GoodLocalRegistry implements Registry {
 
 	@Override
 	public void register(URL url) {
-		System.out.println(url.toFullString());
+//		System.out.println(url.toFullString());
 	}
 
 	@Override
