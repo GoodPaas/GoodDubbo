@@ -106,7 +106,7 @@ Service2实现：
 		}
 客户端通过代理调用后端Service实现：  
 		package com.goodpaas.gooddubbo.demo.simple;
-
+		
 		import com.goodpaas.gooddubbo.demo.DemoService;
 		import com.goodpaas.gooddubbo.support.GLocalClientConfig;
 		import com.goodpaas.gooddubbo.support.GoodSupportFactory;
