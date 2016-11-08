@@ -165,7 +165,7 @@ Service实现：
 	</beans>
 ```
 客户端启动：
-		
+
 		package com.goodpaas.gooddubbo.demo.simple;
 
 		import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -186,8 +186,11 @@ Service实现：
 		    }
 		}
 
-
-
+# 三、Fature
+1、更多Dubbo高级功能的Demo  
+2、整合RPC配置和业务配置  
+3、整合RPC监控和业务监控  
+4、整合自动化发布系统  
 
 
 
