@@ -11,7 +11,7 @@ Maven项目添加依赖：
 	<dependency>
 		<groupId>com.github.goodpaas</groupId>
 		<artifactId>gooddubbo</artifactId>
-		<version>0.1.0.snapshot</version>
+		<version>0.1.2.snapshot</version>
 	</dependency>
 	<dependency>
 		<groupId>com.alibaba</groupId>
