@@ -2,7 +2,7 @@
 对阿里的Dubbo进行精简和封装，降低学习、部署和运维的难度，以适应中等规模公司使用.  
 
 GoodDubbo只是对Dubbo进行扩展，兼容原来的API和配置方式，扩展部分也仅仅涉及配置和监控部分，对Dubbo业务数据传输部分并未做任何改动和扩展，所以对框架稳定性完全不受影响；  
-  
+
 GoodDubbo去除了Dubbo的第三方Registry(zookeeper、redis等)，直接将IP配置在客户端，便于小型项目快捷开发；  
 # 二、Quick Start
 ## 1、依赖
@@ -24,7 +24,6 @@ Maven项目添加依赖：
 创建Service，用于远程调用测试,为了测试客户端负载均衡，创建两个Service实现：  
 Service接口:  
 		package com.goodpaas.gooddubbo.demo;
-
 		public interface DemoService {
 			
 			public String sayHello(String name);
@@ -34,7 +33,6 @@ Service接口:
 		}
 Service1实现：  
 		package com.goodpaas.gooddubbo.demo;
-
 		public class Demo1ServiceImpl implements DemoService{
 
 			@Override
@@ -52,7 +50,6 @@ Service1实现：
 		}
 Service2实现：  
 		package com.goodpaas.gooddubbo.demo;
-
 		public class Demo2ServiceImpl implements DemoService{
 
 			@Override
@@ -71,7 +68,6 @@ Service2实现：
 ## 3、直接调用API Demo
 服务端对外暴露Service1:  
 		package com.goodpaas.gooddubbo.demo.simple;
-
 		import com.goodpaas.gooddubbo.demo.Demo1ServiceImpl;
 		import com.goodpaas.gooddubbo.demo.DemoService;
 		import com.goodpaas.gooddubbo.support.GLocalServerConfig;
@@ -89,7 +85,6 @@ Service2实现：
 		}
 服务端对外暴露Service2:  
 		package com.goodpaas.gooddubbo.demo.simple;
-
 		import com.goodpaas.gooddubbo.demo.Demo2ServiceImpl;
 		import com.goodpaas.gooddubbo.demo.DemoService;
 		import com.goodpaas.gooddubbo.support.GLocalServerConfig;
@@ -107,7 +102,6 @@ Service2实现：
 		}
 客户端通过代理调用后端Service实现：  
 		package com.goodpaas.gooddubbo.demo.simple;
-
 		import com.goodpaas.gooddubbo.demo.DemoService;
 		import com.goodpaas.gooddubbo.support.GLocalClientConfig;
 		import com.goodpaas.gooddubbo.support.GoodSupportFactory;
