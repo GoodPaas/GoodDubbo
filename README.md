@@ -1,7 +1,8 @@
 # 一、GoodDubbo
-Dubbo(RPC framework) package to simplify the development  
 对阿里的Dubbo进行精简和封装，降低学习、部署和运维的难度，以适应中等规模公司使用.  
+
 GoodDubbo只是对Dubbo进行扩展，兼容原来的API和配置方式，扩展部分也仅仅涉及配置和监控部分，对Dubbo业务数据传输部分并未做任何改动和扩展，所以对框架稳定性完全不受影响；  
+  
 GoodDubbo去除了Dubbo的第三方Registry(zookeeper、redis等)，直接将IP配置在客户端，便于小型项目快捷开发；  
 # 二、Quick Start
 ## 1、依赖
