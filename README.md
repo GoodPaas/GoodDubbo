@@ -88,7 +88,7 @@ Service实现：
 		        GLocalClientConfig config = new GLocalClientConfig();
 		        config.addServiceAddress("127.0.0.1:20880");
 		        //多个服务提供方，客户端自动负载均衡
-		        //config..addServiceAddress("127.0.0.1:20881");
+		        //config.addServiceAddress("127.0.0.1:20881");
 		        DemoService demoService = GoodSupportFactory.createGoodProxy(config, DemoService.class);
 		        while(true){
 			        String res = demoService.sayHello("Tom");
