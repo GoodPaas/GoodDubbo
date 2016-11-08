@@ -19,5 +19,4 @@
 	    <dubbo:parameter key="gremote" value="demo-service"/>
     </dubbo:reference>
 	
-       
 </beans>

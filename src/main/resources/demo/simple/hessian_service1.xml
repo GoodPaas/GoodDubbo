@@ -9,7 +9,7 @@
     <!-- 服务端集群名称，用于监控和配置管理 -->
     <dubbo:application name="demo-service" />
     
-    <!-- 服务端配置注册管理器，管理服务和集群IP等，由于此处不需要第三方注册管理，设置为N/A -->
+    <!-- 服务端配置注册管理器，管理服务和集群IP等，此处设置protocol="glocal"，不需要配置第三方注册管理器 -->
     <dubbo:registry protocol="glocal" />
     
     <!-- 暴露服务的协议和端口 -->
