@@ -19,9 +19,6 @@ public class MainService1 {
 		GLocalServerConfig config1 = new GLocalServerConfig();
         config1.setProtocolPort(20880);
         GoodSupportFactory.exportService(config1, DemoService.class,serviceImpl1);
- 
-        
         System.in.read(); // 按任意键退出
     }
-
 }
