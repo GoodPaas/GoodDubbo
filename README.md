@@ -6,16 +6,18 @@ GoodDubbo去除了Dubbo的第三方Registry(zookeeper、redis等)，直接将IP�
 # Quick Start
 ## 依赖
 Maven项目添加依赖：
+```xml
 		<dependency>
-		    <groupId>com.github.goodpaas</groupId>
-		    <artifactId>gooddubbo</artifactId>
-		    <version>0.1.0.snapshot</version>
+			<groupId>com.github.goodpaas</groupId>
+			<artifactId>gooddubbo</artifactId>
+			<version>0.1.0.snapshot</version>
 		</dependency>
 		<dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.5.3</version>
-        </dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+```
 非Maven项目自己下载jar包：[gooddubbo.jar](https://repo1.maven.org/maven2/com/github/goodpaas/gooddubbo/0.1.1/gooddubbo-0.1.1.jar)  [dubbo.jar](https://repo1.maven.org/maven2/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar)
 ## Demo Service
 创建Service，用于远程调用测试,为了测试客户端负载均衡，创建两个Service实现：
