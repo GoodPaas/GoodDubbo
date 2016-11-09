@@ -186,7 +186,7 @@ Service实现：
 		    }
 		}
 
-# 三、Fature
+# 三、Features
 1、整合Dubbo更多高级功能；  
 2、整合RPC配置和业务配置；  
 3、整合RPC监控和业务监控；  
